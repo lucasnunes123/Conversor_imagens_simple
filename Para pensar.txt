@@ -4,4 +4,4 @@
 
 *olhar um tinker bootstrap
 
-*barra de progresão
+*barra de progresão(talvez)
