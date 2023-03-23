@@ -25,7 +25,7 @@ def verificar():
 window = Tk()
 window.geometry("400x250")
 window.config(bg='#141111')
-window.title("Sukitando")
+window.title("Convert")
 
 
 #Label Conversão

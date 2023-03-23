@@ -16,3 +16,5 @@ Conversor de alguns formatos de imagens
 
 
 imagens ficam salvas na pasta imagens_convertidas
+
+P.S: evite arquivos com msm nome
