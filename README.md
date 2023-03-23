@@ -1,3 +1,11 @@
-# Conversor_imagens_simple
-simple python image converter
-(at the time, only webo to gif)
+# Conversor de imagens Simples(para evitar sites que limitam por quantidade arquivo rsrs) com janelinha Tkinker
+
+Conversor de alguns formatos de imagens
+*Webp para Gif
+*Webp para Jpg
+*Jpg para png
+*Jpg para pdf
+*Png para jpg
+*Png para pdf
+
+imagens ficam salvas na pasta imagens_convertidas
