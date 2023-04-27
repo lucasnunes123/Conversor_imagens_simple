@@ -43,7 +43,7 @@ texto_selectfiles.grid(column=0, row=5, padx=0, pady=0)
 #Selecionar tipo de conversão
 List_ConvertTypes = ["Webp para Gif", "Webp para Jpg", "Jpg para Png", "Jpg para Pdf", "Png para Jpg", "Png para Pdf"]
 Cb_ConvertTypes = ttk.Combobox(window, values=List_ConvertTypes)
-Cb_ConvertTypes.set("Webp para Gif")
+Cb_ConvertTypes.set("")
 Cb_ConvertTypes.grid(column=0, row=7, padx=60, pady=0)
 
 
