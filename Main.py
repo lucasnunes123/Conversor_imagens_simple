@@ -11,7 +11,7 @@ def verificar():
     if ve == 'Webp para Gif':
         return WebpToGif()
     elif ve == 'Webp para Jpg':
-        return WebpToJpg
+        return WebpToJpg()
     elif ve == 'Jpg para Png':
         return JpgToPng()
     elif ve == 'Jpg para Pdf':
@@ -41,7 +41,7 @@ texto_selectfiles = Label(window, text="Escolha o Tipo de Conversão", font=('Ar
 texto_selectfiles.grid(column=0, row=5, padx=0, pady=0)
 
 #Selecionar tipo de conversão
-List_ConvertTypes = ["Webp para Gif", "Webp para jpg", "Jpg para Png", "Jpg para Pdf", "Png para Jpg", "Png para Pdf"]
+List_ConvertTypes = ["Webp para Gif", "Webp para Jpg", "Jpg para Png", "Jpg para Pdf", "Png para Jpg", "Png para Pdf"]
 Cb_ConvertTypes = ttk.Combobox(window, values=List_ConvertTypes)
 Cb_ConvertTypes.set("Webp para Gif")
 Cb_ConvertTypes.grid(column=0, row=7, padx=60, pady=0)

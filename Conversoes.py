@@ -19,7 +19,7 @@ def WebpToJpg():
     lista_webp = os.listdir('webp')
 
     for i in lista_webp:
-        imagem = Image.open(f'webp/{i}')
+        imagem = Image.open(f'webp/{i}').convert("RGB")
         imagem.save(f'imagens_convertidas/{i.replace("webp", "jpg")}')
 
 # Conversor JPG to PNG(ok)
