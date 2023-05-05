@@ -1,7 +1,5 @@
 *Outros formatos
     *pdf para docx
     *docx para pdf
-
-*olhar um tinker bootstrap
-
+    
 *barra de progresão(talvez)

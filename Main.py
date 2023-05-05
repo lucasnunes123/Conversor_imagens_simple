@@ -1,13 +1,14 @@
-from tkinter import *
-from tkinter import ttk
+import tkinter as tk
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
-from Check_extension import*
-from Conversoes import *
 from Get_files import abrirJanela
+from Check_extension import *
+from Conversoes import *
 
 #função irá verificar resposta do ComboBox
 def verificar():
-    ve = Cb_ConvertTypes.get()
+    ve = Cb_types.get()
     if ve == 'Webp para Gif':
         return WebpToGif()
     elif ve == 'Webp para Jpg':
@@ -20,36 +21,34 @@ def verificar():
         return PngTojpg()
     elif ve == 'Png para Pdf':
         return PngToPdf()
-    
 
-window = Tk()
-window.geometry("400x250")
-window.config(bg='#141111')
-window.title("Convert")
 
+janela = tk.Tk()
+janela.title("Conversor")
+style =  ttk.Style("solar")
+janela.geometry("400x250")
+
+janela.iconbitmap("icon.ico")
 
 #Label Conversão
-texto_selectfiles = Label(window, text="Selecione os Arquivos Para Converter", font=('Arial 8 bold'), bg="#141111", fg="white")
-texto_selectfiles.grid(column=0, row=0, padx=90, pady=10)
+Label_tipo_conversão = ttk.Label(janela, text="Selecionar Arquivos",font=('Arial 10 bold'))
+Label_tipo_conversão.pack(padx=5, pady=10)
 
 #Botão Selecionar arquivos
-btn_searchfiles = Button(window, text="Selecionar Arquivos", relief='raised', command=abrirJanela)
-btn_searchfiles.grid(column=0, row=2, padx=0, pady=10)
+btn_select_files = ttk.Button(janela, text="Selecionar Arquivos", bootstyle="success-outline", command=abrirJanela)
+btn_select_files.pack(padx=5, pady=10)
 
 #Label Tipo de conversão
-texto_selectfiles = Label(window, text="Escolha o Tipo de Conversão", font=('Arial 8 bold'), bg="#141111", fg="white")
-texto_selectfiles.grid(column=0, row=5, padx=0, pady=0)
+Label_tipo_conversão = ttk.Label(janela, text="Escolha o Tipo de Conversão",font=('Arial 10 bold'))
+Label_tipo_conversão.pack(padx=5, pady=10)
 
 #Selecionar tipo de conversão
 List_ConvertTypes = ["Webp para Gif", "Webp para Jpg", "Jpg para Png", "Jpg para Pdf", "Png para Jpg", "Png para Pdf"]
-Cb_ConvertTypes = ttk.Combobox(window, values=List_ConvertTypes)
-Cb_ConvertTypes.set("")
-Cb_ConvertTypes.grid(column=0, row=7, padx=60, pady=0)
-
+Cb_types = ttk.Combobox(janela, values=List_ConvertTypes, bootstyle="info")
+Cb_types.pack(padx=5, pady=10)
 
 #Botão conversão
-btn_vel = Button(window, text="Converter", command=lambda: [filtrarExtensão(), verificar()])
-btn_vel.grid(column=0, row=9,  pady=10)
+btn_convert = ttk.Button(janela, text="Converter", bootstyle="light", command=lambda: [filtrarExtensão(), verificar()])
+btn_convert.pack(padx=5, pady=10)
 
-
-window.mainloop()
+janela.mainloop()
